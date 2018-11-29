@@ -1,0 +1,35 @@
+listen: 0.0.0.0:8080
+
+url_prefix: https://npm.captaincodeman.com
+
+middlewares:
+  github-oauth-ui:
+    client-id: 0123456789abcdef0123
+    client-secret: 0123456789abcdef0123456789abcdef01234567
+
+auth:
+  github-oauth-ui:
+    org: intesoft
+
+store:
+  google-cloud:
+   projectId: captain-codeman
+   kind: npm
+   bucket: captain-codeman.appspot.com
+
+uplinks:
+  npmjs:
+    url: https://registry.npmjs.org/
+
+packages:
+  '@captaincodeman/*':
+    access: $authenticated
+    publish: $authenticated
+    proxy: npmjs
+  '**':
+    access: $all 
+    publish: $all
+    proxy: npmjs
+
+logs:
+  - {type: stdout, format: pretty, level: http}

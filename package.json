@@ -1,0 +1,21 @@
+{
+  "name": "npm",
+  "version": "1.0.0",
+  "description": "Private NPM registry",
+  "main": "index.js",
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "deploy": "gcloud app deploy --project captain-codeman",
+    "start": "verdaccio --config ./config.yaml"
+  },
+  "author": "simon@captaincodeman.com",
+  "license": "ISC",
+  "dependencies": {
+    "verdaccio": "^3.8.6",
+    "verdaccio-github-oauth-ui": "^1.5.2",
+    "verdaccio-google-cloud": "0.0.9"
+  },
+  "private": true
+}
