@@ -13,9 +13,9 @@
   "author": "simon@captaincodeman.com",
   "license": "ISC",
   "dependencies": {
-    "verdaccio": "^3.8.6",
-    "verdaccio-github-oauth-ui": "^1.5.2",
-    "verdaccio-google-cloud": "0.0.9"
+    "verdaccio": "^5.4.0 ",
+    "verdaccio-github-oauth-ui": "^3.2.0",
+    "verdaccio-google-cloud": "10.1.0"
   },
   "private": true
 }
